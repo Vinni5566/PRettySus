@@ -12,7 +12,6 @@
 ![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=flat-square&logo=vite)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript)
 ![Tests](https://img.shields.io/badge/Tests-8%20passing-brightgreen?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
 
 </div>
 
@@ -506,5 +505,5 @@ PRettySus uses strict **word-boundary matching**, which means:
 <div align="center">
   <i>Built with React, TypeScript, Tailwind CSS, FastAPI, and strict software engineering principles.</i>
   <br/>
-  <i>Zero LLM calls. 100% deterministic. Fully open source.</i>
+  <i>Zero LLM calls. 100% deterministic.</i>
 </div>
