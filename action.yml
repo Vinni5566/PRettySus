@@ -1,0 +1,22 @@
+name: 'PRettySus Analyzer'
+description: 'Deterministic PR Communication Quality Analyzer'
+inputs:
+  github_token:
+    description: 'GitHub token for API access'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: Install dependencies
+      run: pip install -r backend/requirements.txt
+      shell: bash
+    - name: Run PRettySus
+      env:
+        GITHUB_TOKEN: ${{ inputs.github_token }}
+        PYTHONPATH: backend
+      run: python scripts/github_action_runner.py
+      shell: bash

@@ -1,0 +1,17 @@
+name: PRettySus PR Analyzer
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run PRettySus
+        uses: ./
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
